@@ -53,9 +53,18 @@ of a note, use a two- or three-character string, like these:
 |-|-|-|
 |.|staccato|The note will be shortened by 25% and automatically followed by a rest for the remaining 25%. The result is a note of the same length but with a slightly shortened sound. This is especially useful when there are multiple consecutive quarter or eighth notes of the same pitch.|
 |+|dotted note|The note will be shortened by 25% and automatically followed by a rest for the remaining 25%. The result is a note of the same length but with a slightly shortened sound. This is especially useful when there are multiple consecutive quarter or eighth notes of the same pitch.|
+|3|triplet|Divides the length of the note by 3.|
 
 ### Last Position: pitch
 This uses the same pitch encoding as the simple form described above.
+
+A note that has no modifier and is just two numbers can be expressed as an
+integer instead of a string:
+
+    ['81','82','83','84','85']   is the same as   [81,82,83,84,85]
+
+Beware that even though decimals ('8.1','4.6','2.5',etc) appear to be just
+numbers, you still have to enclose them in a string or the script will fail.
 
 Simple notes and string notes can be used interchangeably:
 
