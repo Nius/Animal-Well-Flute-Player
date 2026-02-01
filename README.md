@@ -108,7 +108,7 @@ length character and the pitch. This is optional.
 |Symbol|Effect| |
 |-|-|-|
 |.|staccato|The note will be shortened by 25% and automatically followed by a rest for the remaining 25%. The result is a note of the same length but with a slightly shortened sound. This is especially useful when there are multiple consecutive quarter or eighth notes of the same pitch.|
-|+|dotted note|The note will be shortened by 25% and automatically followed by a rest for the remaining 25%. The result is a note of the same length but with a slightly shortened sound. This is especially useful when there are multiple consecutive quarter or eighth notes of the same pitch.|
+|+|dotted note|Adds half again the note's length. '2+' would be a dotted half note, '4+' would be a dotted quarter note, etc.|
 |3|triplet|Divides the length of the note by 3.|
 
 Beware that even though decimals ('8.1','4.6','2.5',etc) appear to be just

@@ -378,10 +378,10 @@ Yoshi := [
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; What song to play!
-SONG_TO_PLAY := XFiles
+SONG_TO_PLAY := Hornpipe
 
 ; How fast to play. Lower number means faster. Default is 2000.
-TEMPO := 1500
+TEMPO := 450
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
