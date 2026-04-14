@@ -51,6 +51,8 @@ character after the pitch:
     b = down a half step
     # = up a half step
 
+    [1,2,'3b',4,5,'5#','7b',8]
+
 If you're writing in D instead of A and you know all your 7's need to go down
 a half step, you can lock them flat with a control pseudo-note:
 
@@ -62,6 +64,9 @@ using a "natural" accidental, which is an "n", or cancel it completely by
 overwriting it with a natural control pseudo-note:
 
     ':7n'
+
+You can do this with any note you like, as many times as you like. Control
+pseudo-notes pertaining to accidentals are shared across both octaves.
 
 There are two octaves available to play in. By default the flute plays in the
 upper octave. You can push a note down to the lower octave by including a minus
@@ -110,12 +115,14 @@ length character and the pitch. This is optional.
             rest for the remaining 25%. The result is a note of the same length
             but with a slightly shortened sound. This is especially useful when
             there are multiple consecutive quarter or eighth notes of the same
-            pitch.
+            pitch; the Animal Well flute has a very wet sound so adding a tiny
+            space between repeated notes helps them not bleed together.
         + = dotted note
             Adds half again the note's length. '2+' would be a dotted half note,
             '4+' would be a dotted quarter note, etc.
         3 = triplet
-            Divides the length of the note in 3.
+            Divides the length of the note in 3. Put three of these together
+            to make a triplet.
     
 Beware that even though decimals ('8.1','4.6','2.5',etc) appear to be just
 numbers, you still have to enclose them in a string or the script will fail.
@@ -165,10 +172,10 @@ SetTitleMatchMode 2
 #Include songs/yoshi.ahk
 
 ; What song to play!
-SONG_TO_PLAY := Spongebob
+SONG_TO_PLAY := Hornpipe
 
 ; How fast to play. Lower number means faster. Default is 2000.
-TEMPO := 850
+TEMPO := 450
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -358,7 +365,7 @@ PlayLine(LINE)
 
         ; If staccato, play a rest for 1/4 the note's duration.
         if(len_mod = '.')
-            PlayNote(9,duration * 0.25,sharp_switch,octave_switch)
+            PlayNote(9,(duration / 0.75) * 0.25,sharp_switch,octave_switch)
         
     }
 }
